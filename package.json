@@ -1,0 +1,14 @@
+{
+  "name": "tolulope_portfolio",
+  "version": "0.1.0",
+  "description": "Website for Tolulope Odueke's Portfolio  ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Tolulope Odueke",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
