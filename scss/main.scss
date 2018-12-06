@@ -51,7 +51,7 @@ header {
 main {
 	padding: 4rem;
 	// height: 100%;
-	min-height: calc(100vh - 60px);
+	min-height: calc(100vh - 100px);
 
 	.icons {
 		margin-top: 1rem;
@@ -113,12 +113,53 @@ main {
 	}
 }
 
+// Button Styles
+.btn {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin-bottom: 0.3rem;
+	&:hover {
+		background: $secondary-color;
+		color: set-text-color($secondary-color);
+	}
+}
+
+.btn-dark {
+	@extend .btn;
+	backround: darken($primary-color, 50);
+	color: #fff;
+}
+
+.btn-light {
+	@extend .btn;
+	backround: lighten($primary-color, 50);
+}
+
 #main-footer {
 	text-align: center;
 	padding: 1rem;
 	background: darken($secondary-color, 10);
 	color: set-text-color($primary-color);
-	height: 60px;
+	height: 100px;
+}
+
+// Work/Projects
+.projects {
+	display: grid;
+	grid-gap: 0.7rem;
+	grid-template-columns: repeat(3, 1fr);
+
+	img {
+		width: 100%;
+		border: 3px #fff solid;
+
+		&:hover {
+			opacity: 0.5;
+			border-color: $secondary-color;
+			@include easeOut;
+		}
+	}
 }
 
 @import "mobile";
